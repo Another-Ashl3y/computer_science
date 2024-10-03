@@ -24,4 +24,63 @@ Some weird words have been mentioned haven't they? String? Integer? Real? Floati
 + A float or real can store decimal values and can also store very large values however they lose accuracy. They can also use anything from 8 to 64 bits however it is recommended to use 64 to get the highest precision available.
 + A string can take up an infinite amount of space. It is typically an array (We'll get onto those later) of 16 bit values which direct to a character in your downloaded font. Some programs use 8 bit ascii arrays if they do not need other characters and storage is a concern.
 
+### console.log() and alert()
+
+A programmer usually wants to be able to see the data they are manipulating in a nice format without having to look at the 1s and 0s directly. In javascript a console can be accessed through the browser where data can be printed. The console `console` has a function `log` which takes a `string` type and outputs it to the browser console.
+Example: 
+```javascript
+console.log("Hello World!");
+```
+This would output the following:
+```
+Hello World
+```
+An example to display numbers:
+```javascript
+           // v Remember the semi-colon; It's your best friend now!
+let num = 2008; // A variable storing an integer equal to the year the game spore came out
+console.log("Year spore came out: " + num.toLocaleString());
+```
+In this example we had to cast (create a new piece of data which converts the `num` to a string) so that the data could be used in `console.log();` in combination with a string.
+This would output the following:
+```
+Year spore came out: 2008
+```
+
+There is another function which can come in useful called `alert`. This allows developers to create a notification of sorts that prevents the user from interacting with the website until the alert has been acknowledged by pressing "ok".
+
+Example:
+```javascript
+alert("Acknowledge me please!!! I am needy and in need of attention!!!");
+```
+
+### The question of If
+
+A very useful tool in programming is to only run code in certain conditions. In javascript there is a function called `if()` which can be followed by some curly braces `{ with your code }`. This will only run if the condition inside the if statement is met.
+Example:
+```javascript
+if ("this" == "that") {
+    console.log("This shouldn't have been displayed?");
+}
+if ("this" == "this") {
+    console.log("this condition was met");
+}
+
+```
+
+### Lists
+
+### Stuff
+
+### More Stuff
+
+### Functions
+
+Functions are a way of shortening code and making writing code more efficient.
+Functions in javascript are defined like so:
+```javascript
+function name(para,meters) {
+    return ();
+}
+```
 
