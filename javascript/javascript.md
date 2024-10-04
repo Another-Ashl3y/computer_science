@@ -54,11 +54,36 @@ Example:
 alert("Acknowledge me please!!! I am needy and in need of attention!!!");
 ```
 
+### Operators
+
+| Symbol | Meaning | Function |
+|--------|---------|----------|
+| = | Define | Set a variable named by the left side with the value of the right |
+| + | Add | Add two values |
+| - | Subtract | Subtract a value from another |
+| * | Multiply | Multiply two values |
+| / | Divide | Divide a value by another |
+| ++ | Increment | Increase a value by 1 |
+| -- | Decrement | Decrease a value by 1 |
+| == | Equal to | Compare two values. Returns `true` if they are equal |
+| != | Not Equal to| Compare two values. Returns `true` if they are not equal |
+| > | Greater than | Compares two values. Returns `true` if left side is greater than the right |
+| < | Less than | Compares two values. Returns `true` if left side is less than the right |
+| >= | Greater than or equal to | Compares two values. Returns `true` if the left side is greater or equal to the right |
+| <= | Less than or equal to | Compares two values. Returns `true` if the left side is less than or equal to the left |
+| && | AND | Compares two values and returns `true` when both sides are not 0 in memory |
+| \|\| | OR | Compares two values and returns `true` if either sides are not 0 in memory |
+| ! | NOT | Used to invert the data |
+| & | Logical AND | Performs a logical AND operation on two pieces of data |
+| \| | Logical OR | Permorms a logical OR operation on two pieces of data |
+
+
 ### The question of If
 
 A very useful tool in programming is to only run code in certain conditions. In javascript there is a function called `if()` which can be followed by some curly braces `{ with your code }`. This will only run if the condition inside the if statement is met.
 Example:
 ```javascript
+//v it's good to add a space after if but not after other functions.
 if ("this" == "that") {
     console.log("This shouldn't have been displayed?");
 }
@@ -68,7 +93,65 @@ if ("this" == "this") {
 
 ```
 
+A programmer may also want to do something if that condition is not met **as well** as something when it is met. This can be done with `else`. `else` comes after an `if ()`s `{}` and is followed by another `{}` containing the code to do if the scope is executed.
+
+```javascript
+if (condition) {
+  code();
+} else {
+  code();
+}
+```
+
+Pattern matching is incredibly important so you can also check another condition if the initial one is not met and run a different code for that too. Instead of a having to do `if () {} else { if() {} }` you can just add an `if ()` immediately after the `else` and follow that with your code `{}`.
+
+```javascript
+if (condition) {
+  code();
+} else if (condition_2) {
+  code();
+}
+```
+
+### Loops
+
+There are 2 main loops in javascript: `for ()` and `while ()`. They have different use cases but are both useful. `for ()` loops work with a small code `var; condition; step`. `var` is the variable used in the condition and can be defined in the for loop as `for (let i=0;)`. `condition` is the actual condition the `for ()` loop has to meet for it to continue e.g: `for (let i=0; i<30;)`. Then you have the `step` which tells the code what to do at the end of each loop. `for (let i=0; i<30; i++)` will increment `i` after every execution and `for (let i=0; i<30; i--)` will decrement `i` after every execution. __In this case decrementing will not work__. Then you have `while (condition)` which only has a condition to be met for the code to re-execute. `while (true)` will run indefinitely.
+
+Examples:
+```javascript
+// Code that counts from 0 to 29 inclusive
+for (let i=0; i<30; i++) {
+  console.log(i);
+}
+
+
+// A useless while loop
+let left = 10;
+let right = -10;
+
+while (left != right) {
+  let temp = left;
+  left -= right;
+  right += temp;
+}
+
+```
+
+
 ### Lists
+
+Lists are a very useful tool in programming. They allow you to store large amounts of different data in one set to be manipulated. In javascript lists are defined with `[]` around your data separated by commas `,`.
+
+```javascript
+// A dynamic typed array (meaning it contains multiple types of data)
+let a_really_cool_list = [0,1,2,"3","four",5,6.0];
+```
+To access the data you do:
+```javascript
+  // The index starting from 0 v entered as [i] to retrieve the data from that index
+console.log(a_really_cool_list[0]);
+```
+
 
 ### Stuff
 
