@@ -119,3 +119,77 @@ Optical drives use disks to store data which are read (and sometimes but **not a
 Solid state drives trap electrons in a gate even without power. They are much faster than other types of read/write non-volatile storage as their are no moving parts. This makes them more durable to external sources and therefore great for portable devices however they have a limited amount of writes. They are also quite expensive however in the future they will get cheaper as the technology becomes more developed.
 
 
+# Systems Software
+
+### Systems Software
+
+Software that is ran to enable the functionability of the system.
+
+### Applications Software
+
+Software that a user installs for their own uses.
+
+### Utilities Software
+
+Software to help maintain the system.
+
+### Operating Systems
+
+#### Mutli-tasking
+
+An operating system that allows programs to run seemingly at the same time.
+
+#### Real-time
+
+Operating systems that have tight time delays due to real time applications like controlling central heating or gate control on dams
+
+#### Distributed OS
+
+Operating system spread out over multiple devices through a network.
+
+### Kernel
+
+The basic component of an OS that is the foundations for it to work.
+
+### OS Functions
+
+### Interrupts, Device Drivers & BIOS
+
+#### Interrupts
+Interrupts stop the current task and push the CPU data to the stack where the CPU will then run the interrupt instruction defined in a sector of code. The stack is then popped and the CPU data returned.
+#### Device Drivers
+Device drivers allow other devices to communicate with the CPU.
+#### BIOS
+The basic I/O system holds all the data for a computer to maintain itself in the case of an OS failure.
+
+
+### Scheduling
+
+Scheduling is managed by the operating system and allows the programs to run seemingly simultaneously. There are 5 types of algorithms used: Round Robin, FCFS, Shortest Job First, Shortest Remaining Time, Multilevel feedback queues. Scheduling allows for other operations to run so that one program does not stop other programs from running completely if it has a loop in it.
+
+### Round Robin
+
+Or First in First out is where each process is given a fixed time slice or “time quanta” as wikipedia says and it can only run within this time slice. If a process overruns its time slice then it is cut off and moved to the back of a queue where it must wait to get to the front to continue. This removes the problem of 
+
+### First Come First Served
+
+Each process is executed in a queue however if a process is running then no other processes can execute until that process has been completed. This can cause issues with long processes however it means that if an important process is running then it will be finished without being interrupted which can be seen as a positive. Again this has the drawback of less important processes using this time instead of the higher priority processes.
+
+### Shortest Job First
+
+The queue is in order of time taken for the process to run starting with the shortest time. Each process is run until completion and any new processes are inserted into the queue at the correct position.
+
+### Shortest Time Remaining
+
+Like Shortest Job First each process is in a queue in order of time for the process to run starting with the shortest time however if a shorter process enters the queue then it takes priority over the current process.
+
+### Multilevel feedback queues
+
+There are multiple queues with different levels of priority. Shorter processes are preferred over long ones and processes with high I/O bursts are preferred over short bursts. I/O bound processes (ones that require an input to continue) are held in a waiting queue to stop the system from locking whilst waiting for their signal.
+
+
+
+
+
+
+
