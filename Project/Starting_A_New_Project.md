@@ -126,9 +126,13 @@ Solving a problem involves projects that implement AI or bringing easier solutio
 
   + Rust (Programming Language)
   + Minifb (Window Handling Crate)
+  + Godot (A game engine to use in place of Rust and Minifb)
   + Aseprite (Pixel Art Software)
 
   #### Initial Notes
+
+  An Ecosystem Simulation Game is a very complex project, especially to the level of rain world. Each creature in the game is processed both on and off screen. Each creature has to know how to catch prey, hide from predators and shelter from weather, which is a really complex program to make. There aren't many real world applications for this so the only people interested in the game would be programmers and gamers which is still quite a large market. This project would also show advanced programming skills as each creature has to be able to process efficiently and also need to have the capability to traverse terrain. It would be easier to do this in 2D. The creatures would walk around with kinematics and could be trained with their inputs using a neural network which could create an in-game genetic algorithm.
+  The downsides to this program is that it is a very complex project as realistic creature activity is hard to code.
 
 ## Evolution Simulator
 
@@ -150,6 +154,12 @@ Solving a problem involves projects that implement AI or bringing easier solutio
 
   #### Initial Notes
 
+  This would be a very fun project (I have made a few in the past and they are fun to watch). This could be tackled in multiple ways allowing for prototyping. These include: neural networks and hard coded behaviours based off genes. Genetic algorithms are a method of training AI to become better at there task by giving them a score and passing their genes onto the next generation (it's inspired by natural selection after all) and has applications like path finding, and finding solutions to other problems.
+ 
+  Using rust would be good as these types of algorithms take a lot of computing power so relying on a fast language is necessary. Also processing large amounts of data has risks of memory leaks so a memory safe language is very useful in this case.
+
+  The minifb crate would be used to visualize the data like if there are creatures, their position and action could be shown on screen. However drawing to a window takes up a lot of time on top of the 100-2000 creatures being simulated so logging to a database could be a better method and then the data could be shown post-processing to speed up the process.
+
 ## DJ Software
 
 + Sound Card Driver
@@ -170,12 +180,17 @@ Solving a problem involves projects that implement AI or bringing easier solutio
 
   #### Initial Notes
 
+  No.
+
 ## Physics Projectile Simulation
 
   ### Stakeholders
 
   + Physics Teachers
   + Physics Enthusiasts
+  + Golphers
+  + Military
+  + Athletes
 
   ### Tools
 
@@ -184,10 +199,24 @@ Solving a problem involves projects that implement AI or bringing easier solutio
 
   #### Initial Notes
 
+  A physics projectile simulator would be a very small project but would have many real world applications. Due to its simplicity, making it in 3D may be better for a 2 year project.
+  Again rust would be used for speed.
+  Minifb would be used for visualization.
+
 ## Retro Style Game
+  ### Stakeholders
+
+  + Gamers
+
   ### Tools
+
   + Rust (Programming Language)
   + Minifb (Window Handling Crate)
+
+  #### Initial Notes
+
+  A poor project that has no real world applications and doesn't help anything other than entertainment. The game could be used to teach people key life skills, for example a cooking game, however, this should be used as a last resort as it doesn't have enough relevant depth to it.
+
 ## Disease Simulation
   ### Stakeholders
  
@@ -199,6 +228,11 @@ Solving a problem involves projects that implement AI or bringing easier solutio
   + Minifb (Window Handling Crate)
 
   #### Initial Notes
+  
+  Another fun project very similar to the evolution simulator. Could be used to simulate the spread of disease which can be used to test methods of restricting the spread. There would need to be two main elements: people and disease. 
+  People would have features like: immunity which could be increased with vaccines or already having had the virus/disease, wearing masks, behavioural patterns near people, for example some people may stay away from others who cough a lit.
+  Diseases/Viruses would have features like: symptoms such as coughing which increases spread but also runs the risk of killing the host, method of being spread such as airborne, through water and through touch.
+  Database could be used to log data and graphs in python could be used to display data such as population, amount of people infected, resistance over time.
 
 ## Sudoku Solver
   ### Stakeholders
