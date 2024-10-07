@@ -180,9 +180,15 @@ Solving a problem involves projects that implement AI or bringing easier solutio
 
   #### Initial Notes
 
-  No.
+  This would be a large project as making hardware drivers is no small task and a lot of the programming would be in making the user interface which is not what you get marks for.
+  Code could be written to simulate sound but DJ's require low latency software and taking in audio, saving it and manipulating it would be quite hard.
+  Also, I do not know any DJ's so testing it would be quite difficult.
 
 ## Physics Projectile Simulation
+
++ Physics engine
++ ~collision detection~
++ possibly 3D rendering
 
   ### Stakeholders
 
@@ -235,6 +241,10 @@ Solving a problem involves projects that implement AI or bringing easier solutio
   Database could be used to log data and graphs in python could be used to display data such as population, amount of people infected, resistance over time.
 
 ## Sudoku Solver
+
++ Sudoku solving algorithms
++ Sudoku visualizer (Perhaps in terminal like nudoku)
+
   ### Stakeholders
 
   + Sudoku Enthusiasts
@@ -243,4 +253,6 @@ Solving a problem involves projects that implement AI or bringing easier solutio
   + Rust (Programming Language)
 
   #### Initial Notes
+
+  Fun project be minimal real world applications.
 
