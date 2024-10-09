@@ -1,13 +1,23 @@
-use crate::vec2::Vec2;
+use crate::{pixel::Pixel, vec2::Vec2};
 
 #[derive(Clone, Copy)]
-pub struct Physics {
-    velocity: Vec2,
-    mass: f64,
+pub struct Free {
+    pub velocity: Vec2,
+    pub mass: f64,
 }
-
-impl Physics {
+impl Free {
     pub fn new(velocity: Vec2, mass: f64) -> Self {
         Self { velocity, mass }
+    }
+}
+
+#[derive(Clone)]
+pub struct Glue {
+    pub free: Free,
+    pub glued: Vec<Pixel>,
+}
+impl Glue {
+    pub fn new(free: Free, glued: Vec<Pixel>) -> Self {
+        Self { free, glued }
     }
 }

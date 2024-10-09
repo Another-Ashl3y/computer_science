@@ -187,6 +187,95 @@ Like Shortest Job First each process is in a queue in order of time for the proc
 
 There are multiple queues with different levels of priority. Shorter processes are preferred over long ones and processes with high I/O bursts are preferred over short bursts. I/O bound processes (ones that require an input to continue) are held in a waiting queue to stop the system from locking whilst waiting for their signal.
 
+# Applications Generation
+
+### Applications Software
+
+Software designed to be used by an end user for a specific task.
+
+### Knowledge Based System
+
+A system that checks through a database to get answers to questions asked by an end user.
+
+### Knowledge Base
+
+A database of expert collected data.
+
+### Inference Engine
+
+The controller of the knowledge based system.
++ Takes an input
++ Searches database
++ Applies rules
++ Provides output
+
+### Rule Base
+
+The database that holds the set of the rules used to make decisions.
+
+### HCI
+
+The human-computer interface allows users to interact with the system.
+
+### Open Source
+
+Open source is a type of software that allows users to read and edit the source code.
+
+### Closed Source
+
+Closed source is a type of software that does not allow users to read and edit the source code in the user licence.
+
+### Interpreters
+
+Interpreters are software that runs program files without compiling it into machine code. They require systems with this software to be able to run the uncompiled code.
+
+### Compilers
+
+Compilers create a machine code program from a plain text program. For cross-platform programs, compilers have to be written to be compatible with most CPU types as the instructions on different CPUs vary. They also have to be written for different operating systems.
+
+### Assemblers
+
+Assemblers compile assembly code into machine code.
+
+### Lexical Analysis
+
+The lexical analysis works with the syntax analysis to produce a token tree. The lexical analysis turns the code into tokens before sending them to the syntax analysis.
+
+### Syntax Analysis
+
+Syntax Analysis makes sure that the code follows the rules of the programming language. Any errors caught by this stage should be fed back to the programmer for them to fix.
+This doesn't catch logic errors.
+
+### Code Generation
+
+The code generation turns the token tree into machine code.
+
+### Optimisation
+
+Optimisation stops code like `(0..100).sum();` from running and replaces it with the constant value. They can also replace it with a better method of doing this like the mathematical formula for an `r` based summation.
+
+### Linkers
+
+Linkers transform any other files used by the program into machine code to be sent with the main executable.
+
+### Loaders
+
+The loader loads these files into memory for the main program to use.
+
+### Libraries
+
+Libraries are other programs used in another usually written at a different time or even by someone else. This allows for modular code.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
