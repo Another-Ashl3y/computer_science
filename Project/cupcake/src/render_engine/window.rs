@@ -1,10 +1,10 @@
-use crate::camera::Camera;
-use crate::colour::DisplayColour;
-use crate::constants::*;
-use crate::pixel::Pixel;
+use crate::engine::camera::Camera;
+use crate::engine::constants::*;
+use crate::engine::pixel::Pixel;
+use crate::render_engine::colour::DisplayColour;
 use minifb::Window;
 
-fn get_colours(camera: Camera, pixels: &Vec<Pixel>) -> [[DisplayColour; WIDTH]; HEIGHT] {
+fn get_colours(camera: &Camera, pixels: &Vec<Pixel>) -> [[DisplayColour; WIDTH]; HEIGHT] {
     let mut output: [[DisplayColour; WIDTH]; HEIGHT] = [[DisplayColour::black(); WIDTH]; HEIGHT];
 
     for pixel in pixels {
@@ -17,8 +17,8 @@ fn get_colours(camera: Camera, pixels: &Vec<Pixel>) -> [[DisplayColour; WIDTH]; 
         }
 
         let output_position = pixel.position - camera.position;
-        let x = output_position.x.round() as usize;
-        let y = output_position.y.round() as usize;
+        let x = output_position.x as usize;
+        let y = output_position.y as usize;
         let other = output[y][x];
 
         let display_colour = pixel.display_colour();
@@ -33,7 +33,7 @@ fn get_colours(camera: Camera, pixels: &Vec<Pixel>) -> [[DisplayColour; WIDTH]; 
     output
 }
 
-pub fn update_window(window: &mut Window, camera: Camera, pixels: &Vec<Pixel>) {
+pub fn update_window(window: &mut Window, camera: &Camera, pixels: &Vec<Pixel>) {
     let colours = get_colours(camera, pixels);
 
     let mut buffer: [u32; WIDTH * HEIGHT] = [0; WIDTH * HEIGHT];

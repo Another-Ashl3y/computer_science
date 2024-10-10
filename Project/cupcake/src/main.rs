@@ -1,34 +1,40 @@
-mod camera;
-mod colour;
-mod constants;
+mod engine;
 mod physics_engine;
-mod pixel;
-mod pixel_handler;
-mod terrain_generator;
-mod vec2;
-mod window;
+mod render_engine;
 
-use camera::Camera;
-use constants::{HEIGHT, WIDTH};
-use minifb;
-use physics_engine::{physics::Free, simulation_type};
-use pixel::Pixel;
-use terrain_generator::new_terrain;
-use vec2::Vec2;
+use crate::engine::camera::Camera;
+use crate::engine::constants::{HEIGHT, WIDTH};
+use crate::engine::terrain_generator::new_terrain;
+use crate::physics_engine::simulation_type::SimulationType::Static;
+use crate::physics_engine::vec2::Vec2;
+use crate::render_engine::colour::Colour;
+use crate::render_engine::window::update_window;
+
+use crate::engine::pixel_handler::PixelHander;
+use minifb::{Scale, Window, WindowOptions};
 
 fn main() {
-    let mut window = minifb::Window::new(
+    let mut window = Window::new(
         "cupcake",
-        constants::WIDTH,
-        constants::HEIGHT,
-        minifb::WindowOptions {
-            scale: minifb::Scale::X4,
+        WIDTH,
+        HEIGHT,
+        WindowOptions {
+            scale: Scale::X4,
             ..minifb::WindowOptions::default()
         },
     )
     .unwrap();
-    let mut pixels = new_terrain(WIDTH - 1, HEIGHT - 1);
+
+    let terrain = new_terrain(WIDTH, HEIGHT);
+
+    let mut pixels = PixelHander::new();
+    pixels.push_pixels(terrain);
+
+    let mut camera = Camera::new(Vec2::new(0.0, 0.0));
+
     while window.is_open() {
-        window::update_window(&mut window, Camera::new(Vec2::new(0.0, 0.0)), &pixels);
+        camera.position.x += 0.01;
+        pixels.draw(&mut window, &camera);
+        pixels.update();
     }
 }

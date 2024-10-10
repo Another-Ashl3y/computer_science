@@ -1,4 +1,4 @@
-use crate::vec2::Vec2;
+use crate::physics_engine::vec2::Vec2;
 
 use super::physics::{Free, Glue};
 

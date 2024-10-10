@@ -1,6 +1,6 @@
-use crate::colour::{Colour, DisplayColour};
-use crate::simulation_type::SimulationType;
-use crate::vec2::Vec2;
+use crate::physics_engine::simulation_type::SimulationType;
+use crate::physics_engine::vec2::Vec2;
+use crate::render_engine::colour::{Colour, DisplayColour};
 
 #[derive(Clone)]
 pub struct Pixel {

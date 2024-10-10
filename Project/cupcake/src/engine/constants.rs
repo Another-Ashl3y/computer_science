@@ -1,4 +1,4 @@
-use crate::vec2::Vec2;
+use crate::physics_engine::vec2::Vec2;
 
 pub const WIDTH: usize = 256;
 pub const HEIGHT: usize = 144;

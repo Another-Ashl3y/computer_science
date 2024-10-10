@@ -1,4 +1,5 @@
-use crate::{pixel::Pixel, vec2::Vec2};
+use crate::engine::pixel::Pixel;
+use crate::physics_engine::vec2::Vec2;
 
 #[derive(Clone, Copy)]
 pub struct Free {
