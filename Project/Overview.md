@@ -81,6 +81,43 @@ This is quite a large task tree but by doing one part of it at a time the projec
 
 
 
+## Deciding on a methodology
+
+There are 5 common methodologies to choose from; Those being: Waterfall, Rad, Spiral, Agile and Extreme.
+
+The topics to consider are:
+  + Stakeholders
+  + Feasibility, Fact Finding methods used
+  + Requirements Spec
+  + Design Stage
+  + Testing methods and documentation
+  + The 4 methods of implementation
+  + User and Technical documentation
+
+### Waterfall method
+
+The waterfall methodology has many flaws. It relies on each step being completed in order and once a step is complete, it cannot be changed. This means if a product does not meet the buyers demands then at its development-end then it has to be scrapped and restarted. You ask the buyer for the requirements once then design the product then implement, test  and deploy all without checking if any of those steps were what the buyer wanted. The buyer cannot change their mind about the product and the buyer doesn't get to check the product until it is finished. Bad.
+
+### Rapid Application Development
+
+A very cool methodology (you could call it rad), that gets every stage working together throughout development. The buyer (stakeholder) gives the requirements and then the project is planned. After the first prototype (of any section of the project as it is split into multiple parts) the buyer looks at the product and tells them what needs to change. After that the plan is changed and another prototype is made and repeat and so on. This keeps happening until a set time or the buyer is out of money or happy with the end product.
+
+### Spiral
+
+The spiral methodology is like the rad methodology except it repeats every stage sequentially and has less communication.
+
+### Agile
+
+Literally the exact same as rad...
+
+### Extreme
+
+Sections can be repeated without going back to the very start. Programming is done in pairs too which allows for new employees to be coached.
+
+
+
+
+
 
 
 
