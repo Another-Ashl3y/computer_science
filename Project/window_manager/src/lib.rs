@@ -25,20 +25,26 @@ impl Main {
         }
     }
     pub fn update(&mut self) {
-        for i in
+        let size: (usize, usize) = self.window.get_size();
+        let mut buffer: Vec<u32> = vec![0_u32; size.0 * size.1];
+        for widget in self.widgets.clone() {
+            widget.update()
+        }
+        self.window
+            .update_with_buffer(&buffer, size.0, size.1)
+            .unwrap();
     }
 }
 
 pub struct WidgetOptions {
     x: f64,
     y: f64,
-    
 }
 
-
+#[derive(Clone)]
 pub enum Widget {}
 impl Widget {
-    pub fn update() {}
+    pub fn update(&self) {}
 }
 
 #[cfg(test)]
@@ -53,7 +59,9 @@ mod tests {
     #[test]
     fn main() {
         let mut window = Main::new("main test");
-        
+        while window.alive {
+            window.update();
+        }
     }
 }
 
