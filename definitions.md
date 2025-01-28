@@ -266,6 +266,112 @@ The loader loads these files into memory for the main program to use.
 
 Libraries are other programs used in another usually written at a different time or even by someone else. This allows for modular code.
 
+# Data Types
+
+### Denary to Binary
+
+```
+254 -> 1111 1110
+254 >= 128 => 255 - 128 = 127 & mark 1
+126 >= 64  => 126 -  64 =  62 & mark 1
+ 62 >= 32  =>  62 -  32 =  30 & mark 1
+ 30 >= 16  =>  30 -  16 =  14 & mark 1
+ 14 >= 8   =>  14 -   8 =   6 & mark 1
+  6 >= 4   =>   6 -   4 =   2 & mark 1
+  2 >= 2   =>   2 -   2 =   0 & mark 1
+  0 >= 1   x>                   mark 0
+```
+
+### Denary to hex
+
+```
+254 -> 1111 1110 -> FE
+254 >= 128 => 255 - 128 = 127 & mark 1
+126 >= 64  => 126 -  64 =  62 & mark 1
+ 62 >= 32  =>  62 -  32 =  30 & mark 1
+ 30 >= 16  =>  30 -  16 =  14 & mark 1
+ 14 >= 8   =>  14 -   8 =   6 & mark 1
+  6 >= 4   =>   6 -   4 =   2 & mark 1
+  2 >= 2   =>   2 -   2 =   0 & mark 1
+  0 >= 1   x>                   mark 0
+
+1111 = F
+1110 = E
+```
+
+# Data Structures
+
+### Static & Dynamic Data Structures
+
+Static data structures are either a constant size in memory or cannot be altered at all. Typically they are the latter however some languages have exceptions for some reason.
+Dynamic data structures can be manipulated. Their size can change and the value they store too.
+
+### ADT
+
+A data type model that is described with operations but is not strict on how the data is stored or any other methods involved.
+
+### Stack
+
+A stack is a FIFO array where items can be pushed and popped off the top but any values underneath cannot be taken out and items cannot be inserted.
+
+### Queue
+
+A queue is a FILO array where items can be pushed to the back and popped from the front and these terms are queue and dequeue in OCR terms.
+
+### Binary Tree
+
+A binary tree is a data structure that has a root node with a left and right child pointer which can point to null meaning no child. All nodes have a value and a left and right child pointer. A branch is a child node that has children and a leaf is a node that has no children.
+
+### Traversal
+
++ Inorder Traversal takes the most left node, goes up one and then right and then repeats until a requirement is met or all nodes have been inspected.
++ Preorder Traversal starts from the root and then goes down through all left until a leaf and then traverses through the nodes on the right of its parent.
++ Postorder Traversal goes left to right bottom to top along the graph that would be displayed.
+
+### Directed Graphs
+
+Directed graphs have edges that can be traversed only in a single direction and would store the connections between nodes in this manner.
+```
+// Example
+{
+  "A": ["B", "C", "D"],
+  "B": ["A", "D"],
+  "C": [],
+  "D": ["A", "B", "C"],
+}
+```
+
+Undirected graphs do not have this as all edges can be traversed in both directions.
+
+### Hashing
+
+Hash tables store data using a key which accesses an index which a certain item creates through a hash function. Using a modulus function causes override errors as two items access the same memory location thus losing data.
+
+### Linked Lists
+
+Linked lists contain nodes which store a pointer to the following node in the graph and also store a value. They can be stored in memory in any order and it will not effect the order of the list through traversal of the pointers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
